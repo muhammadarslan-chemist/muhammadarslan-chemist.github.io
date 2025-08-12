@@ -1,4 +1,9 @@
 # Muhammad Arslan – Academic Profile
+![Profile Photo](profile.png)
+
+[📄 **Download My CV**](Muhammad-Arslan-CV.pdf)
+
+---
 
 ## About Me
 I am an MPhil-qualified chemist specializing in **Density Functional Theory (DFT)** and **green catalysis**.  
@@ -74,3 +79,5 @@ To contribute to interdisciplinary projects that integrate experimental and comp
 - **Email**: muhammadarslandaar@gmail.com  
 - **LinkedIn**: https://www.linkedin.com/in/muhammad-arslan-daar/ 
 - **ORCID**: https://orcid.org/0009-0000-9622-5682
+- 
+
