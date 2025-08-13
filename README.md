@@ -48,5 +48,5 @@ My work integrates **experimental chemistry** and **computational modeling** to 
 📧 Email: [muhammadarslandaar@gmail.com](mailto:muhammadarslandaar@gmail.com)  
 
 **Find me online:**  
-[<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="32">](https://linkedin.com/in/yourprofile)
-[<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="32">](https://orcid.org/0000-0000-0000-0000)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="32">](https://www.linkedin.com/in/muhammad-arslan-daar/)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="32">](https://orcid.org/0009-0000-9622-5682)
