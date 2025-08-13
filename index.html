@@ -10,13 +10,13 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-   .profile-photo {
-  width: 150px;       /* size of the circle */
-  height: 150px;      /* must be same as width */
-  border-radius: 50%; /* makes the image circular */
-  object-fit: cover;  /* crops and centers the image inside the circle */
-}
-
+    /* Circular profile photo */
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
     /* Top Navigation Bar */
     nav { position: fixed; top: 0; left: 0; width: 100%; background: #1a73e8; padding: 10px 20px; display: flex; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000; }
@@ -29,7 +29,6 @@
     /* Header */
     header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
     header h1 { font-size: 2.2em; color: #222; }
-    header img { <img src="profile.png" alt="Profile Photo" class="profile-photo"> }
 
     /* Buttons */
     .btn { display: inline-block; padding: 8px 16px; margin: 10px 0; background: #1a73e8; color: white; border-radius: 5px; font-weight: bold; }
@@ -74,8 +73,7 @@
     <section id="about">
       <header>
         <h1>Muhammad Arslan</h1>
-       <img src="profile.png" alt="Profile Photo" class="profile-photo">
-
+        <img src="profile.png" alt="Profile Photo" class="profile-photo">
       </header>
       <p>I am an <strong>MPhil-qualified chemist</strong> specializing in <strong>Density Functional Theory (DFT)</strong>, green catalysis, and organometallic synthesis. My work integrates <strong>experimental chemistry</strong> and <strong>computational modeling</strong> to design sustainable catalytic systems for environmental applications such as dye degradation and pollutant removal.</p>
       <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
