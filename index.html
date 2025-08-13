@@ -1,202 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Arslan – Academic Profile</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f9; color: #333; line-height: 1.6; scroll-behavior: smooth; }
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Circular profile photo */
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Arslan – Chemistry Profile</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
     }
-
-    /* Top Navigation Bar */
-    nav { position: fixed; top: 0; left: 0; width: 100%; background: #1a73e8; padding: 10px 20px; display: flex; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000; }
-    nav a { color: white; margin: 0 15px; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-
-    /* Container */
-    .container { max-width: 1000px; margin: 120px auto 30px auto; padding: 0 20px; }
-
-    /* Header */
-    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
-    header h1 { font-size: 2.2em; color: #222; }
-
-    /* Buttons */
-    .btn { display: inline-block; padding: 8px 16px; margin: 10px 0; background: #1a73e8; color: white; border-radius: 5px; font-weight: bold; }
-    .btn:hover { background: #155ab6; }
-
-    /* Sections */
-    section { margin-bottom: 30px; }
-    h2 { color: #1a1a1a; margin-bottom: 15px; border-bottom: 2px solid #1a73e8; padding-bottom: 5px; display: inline-block; }
-
-    /* Cards */
-    .cards { display: flex; flex-wrap: wrap; gap: 15px; }
-    .card { background: white; padding: 15px; border-radius: 8px; flex: 1 1 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-
-    ul { list-style-type: disc; margin-left: 20px; }
-
-    /* Contact icons */
-    .contact a img { width: 32px; margin-right: 10px; vertical-align: middle; }
-
+    /* Navigation */
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: transparent;
+        transition: background 0.3s ease;
+    }
+    nav.solid {
+        background: rgba(0, 51, 102, 0.95);
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: yellow;
+    }
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 20px 40px;
+    }
+    h2 {
+        color: #003366;
+        border-bottom: 2px solid #003366;
+        padding-bottom: 5px;
+    }
+    /* Profile Image */
+    .profile-img {
+        display: block;
+        margin: 100px auto 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #003366;
+    }
     /* Gallery */
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-    .gallery img { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-    .gallery img:hover { transform: scale(1.05); }
-
-    /* Responsive */
-    @media(max-width: 700px) {
-      header { flex-direction: column; align-items: flex-start; }
-      header img { margin-top: 15px; }
-      .cards { flex-direction: column; }
-      nav { flex-direction: column; }
-      nav a { margin: 5px 0; }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
     }
-  </style>
+    .gallery img {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+    /* Lightbox */
+    .lightbox {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.8);
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 2000;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#statement">Statement</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <div class="container">
-    <!-- Header / About -->
-    <section id="about">
-      <header>
-        <h1>Muhammad Arslan</h1>
-        <img src="profile.png" alt="Profile Photo" class="profile-photo">
-      </header>
-      <p>I am an <strong>MPhil-qualified chemist</strong> specializing in <strong>Density Functional Theory (DFT)</strong>, green catalysis, and organometallic synthesis. My work integrates <strong>experimental chemistry</strong> and <strong>computational modeling</strong> to design sustainable catalytic systems for environmental applications such as dye degradation and pollutant removal.</p>
-      <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
-    </section>
+<nav id="navbar">
+    <div>
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#scholarships">Scholarships</a>
+        <a href="#research">Research Highlights</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div>
+        <a href="Muhammad-Arslan-CV.pdf" target="_blank">📄 Download CV</a>
+    </div>
+</nav>
 
-    <!-- Personal Statement -->
-    <section id="statement">
-      <h2>💡 Personal Statement</h2>
-      <p>People matter. It is rewarding and gratifying to do things that have a positive impact on other people, and painful to do things that are harmful to other people.</p>
-      <p>Knowledge matters. The future should be better than the present, just like the present is better than the past. The vast majority of human lives have been massively improved by scientific and technological progress. Contributing to and sharing that progress is a worthy and noble endeavour.</p>
-      <p>Freedom matters. Being able to do, say, and think what you want is valuable and important, as is empowering and enabling others to be free.</p>
-    </section>
+<img src="profile.png" alt="Profile Photo" class="profile-img">
 
-    <!-- Research Interests -->
-    <section id="research">
-      <h2>🔬 Research Interests</h2>
-      <div class="cards">
-        <div class="card">
-          <ul>
-            <li>Computational chemistry (DFT, Gaussian, GaussView)</li>
-            <li>Green catalysis and eco-friendly reaction pathways</li>
-            <li>Organometallic and coordination chemistry</li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul>
-            <li>Mechanistic and kinetic studies</li>
-            <li>Environmental chemistry and pollutant degradation</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<div class="container" id="about">
+    <h2>About Me</h2>
+    <p>People matter. It is rewarding and gratifying to do things that have a positive impact on other people...</p>
+</div>
 
-    <!-- Publications -->
-    <section id="publications">
-      <h2>📚 Publications</h2>
-      <ul>
-        <li><strong>Green Photooxidative Degradation of Reactive Blue Dye via Ascorbic Acid and Its Metal Complexes:</strong> Kinetics, RSM Optimization, and DFT Validation. <em>Under Review</em> – Molecular Catalysis (IF=4.9), Manuscript ID: MOLCAA-D-25-01258.</li>
-        <li><strong>Visible-Light-Induced Green Organocatalytic Degradation of Reactive Black 5:</strong> A Mechanistic and Kinetic Study with RSM Optimization. <em>Under Review</em> – ChemistrySelect (IF=2.0), Manuscript ID: slct.202504638.</li>
-      </ul>
-    </section>
+<div class="container" id="publications">
+    <h2>Publications</h2>
+    <ul>
+        <li><strong>Submitted:</strong> Green Photooxidative Degradation of Reactive Blue Dye... <em>(Molecular Catalysis, IF=4.9)</em></li>
+        <li><strong>Submitted:</strong> Visible-Light-Induced Green Organocatalytic Degradation... <em>(ChemistrySelect, IF=2.0)</em></li>
+    </ul>
+</div>
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2>🧪 Laboratory Skills</h2>
-      <ul>
+<div class="container" id="skills">
+    <h2>Laboratory Skills</h2>
+    <ul>
         <li>Raman Spectroscopy</li>
         <li>Synthesis</li>
-        <li>Salt analysis</li>
         <li>UV-Vis Spectrophotometry</li>
-        <li>Rotatory Evaporator</li>
-        <li>Gallenkamp Melting Point Apparatus</li>
         <li>Column Chromatography</li>
-        <li>Titrations</li>
-      </ul>
-    </section>
+    </ul>
+</div>
 
-    <!-- Education -->
-    <section id="education">
-      <h2>🎓 Education</h2>
-      <div class="cards">
-        <div class="card">
-          <strong>M.Phil. Chemistry</strong> – University of Agriculture, Faisalabad, Pakistan<br>
-          CGPA: 3.09 / 4.00<br>
-          <em>Thesis:</em> Comparative Study of Azolium Based Selenium Compounds using Density Functional Theory
-        </div>
-        <div class="card">
-          <strong>B.S. Chemistry</strong> – Government College University, Faisalabad, Pakistan<br>
-          CGPA: 3.29 / 4.00 (Specialization: Organic Chemistry)
-        </div>
-      </div>
-    </section>
+<div class="container" id="scholarships">
+    <h2>Scholarships & Awards</h2>
+    <ul>
+        <li>MTB College Sadiqabad Fullyfunded Scholarship (2014-2016)</li>
+        <li>HEC Laptop Award</li>
+    </ul>
+</div>
 
-    <!-- Work Experience -->
-    <section id="experience">
-      <h2>💼 Work Experience</h2>
-      <div class="cards">
-        <div class="card"><strong>Research Assistant</strong> – Synthetic Organometallic & Coordination Chemistry Lab, UAF (Sep 2021 – Present)</div>
-        <div class="card"><strong>R&D Intern</strong> – Nishat Dyeing & Finishing, Lahore (Feb 2022 – Jul 2022)</div>
-        <div class="card"><strong>Lecturer (Chemistry)</strong> – Chenab College, Faisalabad (2023–2024)</div>
-      </div>
-    </section>
+<div class="container" id="research">
+    <h2>Research Highlights</h2>
+    <div class="gallery">
+        <img src="fig1.jpg" alt="Figure 1">
+        <img src="fig2.jpg" alt="Figure 2">
+        <img src="fig3.jpg" alt="Figure 3">
+        <img src="fig4.jpg" alt="Figure 4">
+    </div>
+</div>
 
-    <!-- Achievements -->
-    <section id="achievements">
-      <h2>🏆 Scholarships & Awards</h2>
-      <ul>
-        <li>MTB College Sadiqabad Fully Funded Scholarship for F.Sc Pre-Medical Degree (2014-2016)</li>
-        <li>Higher Education Commission of Pakistan Laptop for undergraduate students</li>
-        <li>Stipendium Hungaricum Scholarship – Shortlisted for Master's studies in Hungary</li>
-        <li>Completed certifications in Forensic Science, Advanced Data Analytics, and AI Essentials</li>
-      </ul>
-    </section>
+<div class="container" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="gallery1.jpg" alt="Gallery 1">
+        <img src="gallery2.jpg" alt="Gallery 2">
+        <img src="gallery3.jpg" alt="Gallery 3">
+        <img src="gallery4.jpg" alt="Gallery 4">
+        <img src="gallery5.jpg" alt="Gallery 5">
+        <img src="gallery6.jpg" alt="Gallery 6">
+    </div>
+</div>
 
-    <!-- Photo Gallery -->
-    <section id="gallery">
-      <h2>📸 Photo Gallery</h2>
-      <div class="gallery">
-        <img src="gallery1.jpg" alt="Gallery Image 1">
-        <img src="gallery2.jpg" alt="Gallery Image 2">
-        <img src="gallery3.jpg" alt="Gallery Image 3">
-      </div>
-    </section>
+<div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+</div>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>📬 Contact</h2>
-      <p>📧 Email: <a href="mailto:muhammadarslandaar@gmail.com">muhammadarslandaar@gmail.com</a></p>
-      <p class="contact">
-        Find me online:
-        <a href="https://www.linkedin.com/in/muhammad-arslan-daar/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
-        <a href="https://orcid.org/0009-0000-9622-5682"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID"></a>
-      </p>
-    </section>
-  </div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        document.getElementById('navbar').classList.toggle('solid', window.scrollY > 50);
+    });
+    // Lightbox functionality
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+</script>
+
 </body>
 </html>
