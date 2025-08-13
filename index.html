@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Arslan – Academic Profile</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f9; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Top Navigation Bar */
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: #1a73e8; padding: 10px 20px; display: flex; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000; }
+    nav a { color: white; margin: 0 15px; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Container */
+    .container { max-width: 1000px; margin: 120px auto 30px auto; padding: 0 20px; }
+
+    /* Header */
+    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+    header h1 { font-size: 2.2em; color: #222; }
+    header img { border-radius: 10px; width: 150px; }
+
+    /* Buttons */
+    .btn { display: inline-block; padding: 8px 16px; margin: 10px 0; background: #1a73e8; color: white; border-radius: 5px; font-weight: bold; }
+    .btn:hover { background: #155ab6; }
+
+    /* Sections */
+    section { margin-bottom: 30px; }
+    h2 { color: #1a1a1a; margin-bottom: 15px; border-bottom: 2px solid #1a73e8; padding-bottom: 5px; display: inline-block; }
+
+    /* Cards */
+    .cards { display: flex; flex-wrap: wrap; gap: 15px; }
+    .card { background: white; padding: 15px; border-radius: 8px; flex: 1 1 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+    ul { list-style-type: disc; margin-left: 20px; }
+
+    /* Contact icons */
+    .contact a img { width: 32px; margin-right: 10px; vertical-align: middle; }
+
+    /* Responsive */
+    @media(max-width: 700px) {
+      header { flex-direction: column; align-items: flex-start; }
+      header img { margin-top: 15px; }
+      .cards { flex-direction: column; }
+      nav { flex-direction: column; }
+      nav a { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Header / About -->
+    <section id="about">
+      <header>
+        <h1>Muhammad Arslan</h1>
+        <img src="profile.png" alt="Profile Photo">
+      </header>
+      <p>I am an <strong>MPhil-qualified chemist</strong> specializing in <strong>Density Functional Theory (DFT)</strong>, green catalysis, and organometallic synthesis. My work integrates <strong>experimental chemistry</strong> and <strong>computational modeling</strong> to design sustainable catalytic systems for environmental applications such as dye degradation and pollutant removal.</p>
+      <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="research">
+      <h2>🔬 Research Interests</h2>
+      <div class="cards">
+        <div class="card">
+          <ul>
+            <li>Computational chemistry (DFT, Gaussian, GaussView)</li>
+            <li>Green catalysis and eco-friendly reaction pathways</li>
+            <li>Organometallic and coordination chemistry</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul>
+            <li>Mechanistic and kinetic studies</li>
+            <li>Environmental chemistry and pollutant degradation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>🎓 Education</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>M.Phil. Chemistry</strong> – University of Agriculture, Faisalabad, Pakistan<br>
+          CGPA: 3.09 / 4.00<br>
+          <em>Thesis:</em> Comparative Study of Azolium Based Selenium Compounds using Density Functional Theory
+        </div>
+        <div class="card">
+          <strong>B.S. Chemistry</strong> – Government College University, Faisalabad, Pakistan<br>
+          CGPA: 3.29 / 4.00 (Specialization: Organic Chemistry)
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience">
+      <h2>💼 Work Experience</h2>
+      <div class="cards">
+        <div class="card"><strong>Research Assistant</strong> – Synthetic Organometallic & Coordination Chemistry Lab, UAF (Sep 2021 – Present)</div>
+        <div class="card"><strong>R&D Intern</strong> – Nishat Dyeing & Finishing, Lahore (Feb 2022 – Jul 2022)</div>
+        <div class="card"><strong>Lecturer (Chemistry)</strong> – Chenab College, Faisalabad (2023–2024)</div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>🏆 Scholarships & Achievements</h2>
+      <div class="cards">
+        <div class="card"><strong>Stipendium Hungaricum Scholarship</strong> – Shortlisted for Master's studies in Hungary</div>
+        <div class="card">Completed online certifications in <em>Forensic Science</em>, <em>Advanced Data Analytics</em>, and <em>AI Essentials</em></div>
+        <div class="card">Industrial R&D experience in textile dyeing and finishing</div>
+        <div class="card">Thesis research featured in discussions on green chemistry and computational catalysis</div>
+        <div class="card">Strong academic performance in organic and environmental chemistry</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <p>📧 Email: <a href="mailto:muhammadarslandaar@gmail.com">muhammadarslandaar@gmail.com</a></p>
+      <p class="contact">
+        Find me online:
+        <a href="https://www.linkedin.com/in/muhammad-arslan-daar/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="https://orcid.org/0009-0000-9622-5682"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID"></a>
+      </p>
+    </section>
+  </div>
+</body>
+</html>
