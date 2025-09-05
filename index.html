@@ -222,17 +222,40 @@
   </div>
 </section>
 
-    <!-- Photo Gallery -->
-    <section id="gallery">
-      <h2>📸 Photo Gallery</h2>
-      <div class="gallery">
-        <img src="gallery4.jpg" alt="Gallery Image 1">
-        <img src="gallery2.jpg" alt="Gallery Image 2">
-        <img src="gallery5.jpg" alt="Gallery Image 3">
-        <img src="gallery1.jpg" alt="Gallery Image 4">
-        <img src="gallery3.jpg" alt="Gallery Image 5">
-      </div>
-    </section>
+   <!-- Photo Gallery -->
+<section id="gallery">
+  <h2>📸 Photo Gallery</h2>
+  <div class="photo-gallery">
+    <div class="photo-item">
+      <img src="gallery4.jpg" alt="Research Presentation" onclick="openLightbox(this)">
+      <p>Research Presentation</p>
+    </div>
+    <div class="photo-item">
+      <img src="gallery2.jpg" alt="Lab Experiment" onclick="openLightbox(this)">
+      <p>Lab Experiment</p>
+    </div>
+    <div class="photo-item">
+      <img src="gallery5.jpg" alt="Conference Participation" onclick="openLightbox(this)">
+      <p>Conference Participation</p>
+    </div>
+    <div class="photo-item">
+      <img src="gallery1.jpg" alt="Chemistry Lecture" onclick="openLightbox(this)">
+      <p>Chemistry Lecture</p>
+    </div>
+    <div class="photo-item">
+      <img src="gallery3.jpg" alt="Team Collaboration" onclick="openLightbox(this)">
+      <p>Team Collaboration</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div class="caption" id="lightbox-caption"></div>
+</div>
+
 
     <!-- Contact -->
     <section id="contact">
