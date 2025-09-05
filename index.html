@@ -3,170 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Arslan – Academic Profile</title>
+  <title>Muhammad Arslan – Chemist Portfolio</title>
+
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7f9; 
-      color: #333; 
-      line-height: 1.6; 
-      scroll-behavior: smooth; 
-    }
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* Sidebar Navigation */
-    nav {
-      position: fixed;
-      top: 0; left: 0;
-      height: 100%; width: 240px;
-      background: #1a73e8;
-      padding: 25px 15px;
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      box-shadow: 2px 0 6px rgba(0,0,0,0.2);
-      z-index: 1000;
     }
-    nav h2 {
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #111;
       color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .sidebar h2 {
       font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      color: #f5f5f5;
     }
-    nav a {
-      color: white;
-      padding: 10px 15px;
-      width: 100%;
-      font-weight: 600;
-      font-size: 15px;
-      text-align: left;
-      transition: background 0.3s;
+    .sidebar a {
       display: block;
-    }
-    nav a:hover {
-      background: #155ab6;
       text-decoration: none;
+      color: white;
+      padding: 10px 0;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #00aced;
+      transform: translateX(5px);
     }
 
     /* Contact in Sidebar */
     .sidebar-contact {
       margin-top: 20px;
-      padding: 10px;
       border-top: 1px solid rgba(255,255,255,0.3);
+      padding-top: 10px;
     }
     .sidebar-contact a {
       display: flex;
       align-items: center;
-      color: white;
       font-size: 14px;
       margin: 8px 0;
       transition: 0.3s;
     }
-    .sidebar-contact a:hover {
-      color: #ffeb3b;
-    }
-    .sidebar-contact i {
+    .sidebar-contact a i {
       margin-right: 8px;
       font-size: 16px;
     }
+    .sidebar-contact a.linkedin { color: #0A66C2; }
+    .sidebar-contact a.whatsapp { color: #25D366; }
+    .sidebar-contact a:hover { transform: translateX(5px); }
 
-    /* Container */
-    .container {
+    /* Main Content */
+    .main-content {
       margin-left: 260px;
-      max-width: 1000px;
-      padding: 30px 20px;
+      padding: 20px;
+      flex: 1;
     }
-
-    /* Section Box Style */
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    h2 {
-      margin-bottom: 15px;
-      border-bottom: 2px solid #1a73e8;
-      padding-bottom: 5px;
-      display: inline-block;
+    section h2 {
+      margin-top: 0;
     }
 
-    /* Different background + fonts for sections */
-    #about { background: #ffffff; font-family: Georgia, serif; }
-    #statement { background: #fef9e7; font-family: 'Times New Roman', Times, serif; }
-    #research { background: #e8f6f3; font-family: Arial, sans-serif; }
-    #publications { background: #f9ebea; font-family: Verdana, sans-serif; }
-    #skills { background: #f4ecf7; font-family: 'Trebuchet MS', sans-serif; }
-    #education { background: #eaf2f8; font-family: Calibri, sans-serif; }
-    #experience { background: #fdf2e9; font-family: Helvetica, sans-serif; }
-    #achievements { background: #ebf5fb; font-family: Courier, monospace; }
+    /* Different background colors for sections */
+    #about { background: #f4f9f9; }
+    #statement { background: #fff4e6; }
+    #research { background: #f0f4ff; }
+    #publications { background: #eafaf1; }
+    #skills { background: #fff9db; }
+    #education { background: #fceef5; }
+    #experience { background: #eef6fc; }
+    #achievements { background: #f7f7f7; }
     #certificates { background: #ffffff; }
-    #gallery { background: #ffffff; }
-    #contact { background: #fef9e7; }
+    #gallery { background: #fdfdfd; }
+    #contact { background: #f3f3f3; }
 
-    /* Certificates */
-    .cert-grid {
+    /* Certificates Grid */
+    .certificates-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
     }
     .certificate-item {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 10px;
       text-align: center;
     }
     .certificate-item img {
       width: 100%;
       height: 140px;
       object-fit: cover;
-      border-radius: 6px;
-      transition: transform 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-    .certificate-item img:hover { transform: scale(1.05); }
+    .certificate-item img:hover {
+      transform: scale(1.05);
+    }
     .certificate-item p {
       margin-top: 8px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     /* Gallery */
     .photo-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 15px;
     }
-    .photo-item img {
+    .photo-gallery img {
       width: 100%;
-      height: 200px;
+      height: 160px;
       object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
     }
-    .photo-item img:hover { transform: scale(1.05); }
-
-    /* Responsive */
-    @media(max-width: 900px) {
-      nav { width: 200px; }
-      .container { margin-left: 220px; }
-    }
-    @media(max-width: 700px) {
-      nav { position: relative; width: 100%; height: auto; flex-direction: row; }
-      .container { margin-left: 0; }
+    .photo-gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <!-- Sidebar Navigation -->
-  <nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
     <h2>Muhammad Arslan</h2>
+
+    <div class="sidebar-contact">
+      <a href="mailto:muhammadarslandaar@gmail.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="tel:+923157449626"><i class="fas fa-phone"></i>+92 315 7449626</a>
+      <a href="https://wa.me/923157449626" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      <a href="https://www.linkedin.com/in/muhammad-arslan-daar/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://orcid.org/0009-0000-9622-5682" target="_blank"><i class="fas fa-flask"></i>ORCiD</a>
+    </div>
+
     <a href="#about">About</a>
     <a href="#statement">Statement</a>
     <a href="#research">Research</a>
@@ -178,19 +165,123 @@
     <a href="#certificates">Certificates</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+  </div>
 
-    <!-- Contact in Sidebar -->
-    <div class="sidebar-contact">
-      <a href="mailto:muhammadarslandaar@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
-      <a href="tel:+923157449626"><i class="fas fa-phone"></i><span>+92 315 7449626</span></a>
-      <a href="https://wa.me/923157449626" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-      <a href="https://www.linkedin.com/in/muhammad-arslan-daar/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-      <a href="https://orcid.org/0009-0000-9622-5682" target="_blank"><i class="fas fa-flask"></i><span>ORCiD</span></a>
-    </div>
-  </nav>
+  <!-- Main Content -->
+  <div class="main-content">
 
-  <div class="container">
-    <!-- Keep all your sections same here (About, Statement, Research, Publications, Skills, Education, Experience, Achievements, Certificates, Gallery, Contact) -->
+    <section id="about">
+      <h2>👨‍🔬 About</h2>
+      <p>I am Muhammad Arslan, an MPhil-qualified chemist specializing in computational chemistry and sustainable practices...</p>
+    </section>
+
+    <section id="statement">
+      <h2>📝 Statement</h2>
+      <p>My vision is to advance research in green catalysis and forensic chemistry...</p>
+    </section>
+
+    <section id="research">
+      <h2>🔬 Research</h2>
+      <p>Comparative study of azolium-based selenium compounds using DFT, integration of computational and experimental chemistry...</p>
+    </section>
+
+    <section id="publications">
+      <h2>📑 Publications</h2>
+      <p>(Add here once available)</p>
+    </section>
+
+    <section id="skills">
+      <h2>💡 Skills</h2>
+      <ul>
+        <li>Computational Chemistry (DFT, Molecular Modeling)</li>
+        <li>Green Catalysis & Environmental Chemistry</li>
+        <li>Forensic Science Techniques</li>
+        <li>Spectroscopy & Chromatography</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>🎓 Education</h2>
+      <p>MPhil Chemistry – University of Agriculture Faisalabad (2023)</p>
+      <p>BSc Chemistry – Government College University Faisalabad (2021)</p>
+    </section>
+
+    <section id="experience">
+      <h2>💼 Experience</h2>
+      <p>Cryst Synthetic Chemicals PVT.Ltd - Supervisor Production</p>
+      <p>Nishat Dyeing and Finishing, Lahore – Management Trainee Officer</p>
+    </section>
+
+    <section id="achievements">
+      <h2>🏆 Achievements</h2>
+      <ul>
+        <li>Research in computational organometallic chemistry</li>
+        <li>Industrial exposure in textile dyeing and finishing</li>
+        <li>Training in forensic science and advanced lab techniques</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>📜 Certificates</h2>
+      <div class="certificates-grid">
+        <div class="certificate-item">
+          <a href="certificates/Forensic-Science-Fingerprints.pdf" target="_blank">
+            <img src="certificates/Forensic-Science-Fingerprints.jpg" alt="Forensic Science">
+          </a>
+          <p>Forensic Science (Fingerprints)</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/Digital-Forensic-Certificate.pdf" target="_blank">
+            <img src="certificates/Digital-Forensic-Certificate.jpg" alt="Digital Forensic">
+          </a>
+          <p>Digital Forensic</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/Essential-Software-Workshop.pdf" target="_blank">
+            <img src="certificates/Essential-Software-Workshop.jpg" alt="Essential Software">
+          </a>
+          <p>Essential Software Workshop</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/Gas-Chromatography.pdf" target="_blank">
+            <img src="certificates/Gas-Chromatography.jpg" alt="Gas Chromatography">
+          </a>
+          <p>Gas Chromatography</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/High-Performance-Liquid-Chromatography.pdf" target="_blank">
+            <img src="certificates/High-Performance-Liquid-Chromatography.jpg" alt="HPLC">
+          </a>
+          <p>High-Performance Liquid Chromatography</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/Scanning-Electron-Microscope.pdf" target="_blank">
+            <img src="certificates/Scanning-Electron-Microscope.jpg" alt="SEM">
+          </a>
+          <p>Scanning Electron Microscope</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>📸 Gallery</h2>
+      <div class="photo-gallery">
+        <img src="gallery/gallery1.jpg" alt="Gallery Image 1">
+        <img src="gallery/gallery2.jpg" alt="Gallery Image 2">
+        <img src="gallery/gallery3.jpg" alt="Gallery Image 3">
+        <img src="gallery/gallery4.jpg" alt="Gallery Image 4">
+        <img src="gallery/gallery5.jpg" alt="Gallery Image 5">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>📞 Contact</h2>
+      <p>Email: <a href="mailto:muhammadarslandaar@gmail.com">muhammadarslandaar@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923157449626">+92 315 7449626</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-arslan-daar/">Profile</a></p>
+      <p>ORCiD: <a href="https://orcid.org/0009-0000-9622-5682">0009-0000-9622-5682</a></p>
+    </section>
+
   </div>
 </body>
 </html>
