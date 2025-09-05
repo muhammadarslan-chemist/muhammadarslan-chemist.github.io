@@ -22,7 +22,7 @@
       position: fixed;
       top: 0; left: 0;
       height: 100%; width: 240px;
-      background: #2c3e50;
+      background: #2c3e50; /* changed sidebar color */
       padding-top: 20px;
       display: flex;
       flex-direction: column;
@@ -46,13 +46,13 @@
       text-align: left;
       transition: background 0.3s;
     }
-    nav a:hover { background: #155ab6; text-decoration: none; }
-    
+    nav a:hover {
+      background: #155ab6;
+      text-decoration: none;
+    }
     .sidebar-contact {
       margin: 10px 0;
       padding: 10px;
-      display: flex;
-      flex-direction: column;
     }
     .sidebar-contact a {
       display: flex;
@@ -93,20 +93,6 @@
       background: url('gallery/gallery2.jpg') center/cover no-repeat; 
       font-family: Georgia, serif; 
       color: white;
-      position: relative;
-    }
-    #about::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5); /* overlay for readability */
-      border-radius: 10px;
-      z-index: 0;
-    }
-    #about .content {
-      position: relative;
-      z-index: 1;
     }
     #statement { background: #fef9e7; font-family: 'Times New Roman', Times, serif; }
     #research { background: #e8f6f3; }
@@ -194,11 +180,8 @@
     <h2>Muhammad Arslan</h2>
     
     <div class="sidebar-contact">
-      <a href="mailto:muhammadarslandaar@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="tel:+923157449626"><i class="fas fa-phone"></i>+92 315 7449626</a>
       <a href="https://wa.me/923157449626" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i>WhatsApp</a>
       <a href="https://www.linkedin.com/in/muhammad-arslan-daar/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://orcid.org/0009-0000-9622-5682" target="_blank"><i class="fas fa-flask"></i>ORCiD</a>
     </div>
 
     <a href="#about">About</a>
@@ -213,20 +196,24 @@
     <a href="#certificates">Certificates</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+
+    <div class="sidebar-contact" style="border-top:1px solid rgba(255,255,255,0.3); margin-top:auto;">
+      <a href="mailto:muhammadarslandaar@gmail.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="tel:+923157449626"><i class="fas fa-phone"></i>+92 315 7449626</a>
+      <a href="https://orcid.org/0009-0000-9622-5682" target="_blank"><i class="fas fa-flask"></i>ORCiD</a>
+    </div>
   </nav>
 
   <!-- Main Container -->
   <div class="container">
     <!-- About -->
     <section id="about">
-      <div class="content">
-        <header style="background: rgba(0,0,0,0.5); padding:20px; border-radius:10px;">
-          <h1>Muhammad Arslan</h1>
-          <img src="profile.png" alt="Profile Photo" class="profile-photo">
-        </header>
-        <p><strong>Computational chemist (MPhil)</strong> specializing in <strong>DFT modeling of organometallic and selenium compounds</strong> for sustainable catalysis and environmental remediation.</p>
-        <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
-      </div>
+      <header style="background: rgba(0,0,0,0.5); padding:20px; border-radius:10px;">
+        <h1>Muhammad Arslan</h1>
+        <img src="profile.png" alt="Profile Photo" class="profile-photo">
+      </header>
+      <p><strong>Computational chemist (MPhil)</strong> specializing in <strong>DFT modeling of organometallic and selenium compounds</strong> for sustainable catalysis and environmental remediation.</p>
+      <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
     </section>
 
     <!-- Research Statement -->
@@ -317,4 +304,34 @@
     <section id="certificates">
       <h2>📜 Certificates</h2>
       <div class="gallery">
-        <div class="certificate-item"><a href="certificates/Forensic-Science-Fingerprints.pdf"><img src="certificates/Forensic-Science-F
+        <div class="certificate-item"><a href="certificates/Forensic-Science-Fingerprints.pdf"><img src="certificates/Forensic-Science-Fingerprints.jpg"><p>Forensic Science & Fingerprints</p></a></div>
+        <div class="certificate-item"><a href="certificates/Digital-Forensic-Certificate.pdf"><img src="certificates/Digital-Forensic-Certificate.jpg"><p>Digital Forensics</p></a></div>
+        <div class="certificate-item"><a href="certificates/Essential-Software-Workshop.pdf"><img src="certificates/Essential-Software-Workshop.jpg"><p>Essential Software Workshop</p></a></div>
+        <div class="certificate-item"><a href="certificates/Gas-Chromatography.pdf"><img src="certificates/Gas-Chromatography.jpg"><p>Gas Chromatography</p></a></div>
+        <div class="certificate-item"><a href="certificates/High-Performance-Liquid-Chromatography.pdf"><img src="certificates/High-Performance-Liquid-Chromatography.jpg"><p>HPLC</p></a></div>
+        <div class="certificate-item"><a href="certificates/Scanning-Electron-Microscope.pdf"><img src="certificates/Scanning-Electron-Microscope.jpg"><p>SEM Training</p></a></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>📸 Photo Gallery</h2>
+      <div class="photo-gallery">
+        <div class="photo-item"><img src="gallery/gallery1.jpg"></div>
+        <div class="photo-item"><img src="gallery/gallery2.jpg"></div>
+        <div class="photo-item"><img src="gallery/gallery3.jpg"></div>
+        <div class="photo-item"><img src="gallery/gallery4.jpg"></div>
+        <div class="photo-item"><img src="gallery/gallery5.jpg"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <p><strong>Address:</strong> Chak No. 471/E.B, Burewala, District Vehari, Punjab, Pakistan</p>
+      <p><strong>Email:</strong> <a href="mailto:muhammadarslandaar@gmail.com">muhammadarslandaar@gmail.com</a></p>
+      <p><strong>Phone:</strong> +92 315 7449626</p>
+    </section>
+  </div>
+</body>
+</html>
