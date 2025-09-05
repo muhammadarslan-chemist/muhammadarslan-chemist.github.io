@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Arslan – Academic Profile</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { 
@@ -20,12 +22,11 @@
     nav {
       position: fixed;
       top: 0; left: 0;
-      height: 100%; width: 220px;
+      height: 100%; width: 240px;
       background: #1a73e8;
-      padding-top: 30px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       box-shadow: 2px 0 6px rgba(0,0,0,0.2);
       z-index: 1000;
     }
@@ -33,25 +34,35 @@
       color: white;
       font-size: 20px;
       font-weight: bold;
-      margin: 0 0 20px 20px;
+      margin-bottom: 15px;
     }
+    nav .contact-info {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    nav .contact-info p {
+      margin: 8px 0;
+      color: #eee;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    nav .contact-info a { color: #eee; }
+    nav .contact-info a:hover { color: #fff; }
+
     nav a {
       color: white;
-      padding: 12px 20px;
-      width: 100%;
+      padding: 10px 0;
       font-weight: 600;
       font-size: 15px;
       text-align: left;
       transition: background 0.3s;
     }
-    nav a:hover {
-      background: #155ab6;
-      text-decoration: none;
-    }
+    nav a:hover { background: #155ab6; text-decoration: none; padding-left: 5px; }
 
     /* Container */
     .container {
-      margin-left: 240px;
+      margin-left: 260px;
       max-width: 1000px;
       padding: 30px 20px;
     }
@@ -62,6 +73,7 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #fff;
     }
     h2 {
       margin-bottom: 15px;
@@ -70,68 +82,29 @@
       display: inline-block;
     }
 
-    /* Different background + fonts for sections */
-    #about { background: #ffffff; font-family: Georgia, serif; }
-    #statement { background: #fef9e7; font-family: 'Times New Roman', Times, serif; }
-    #research { background: #e8f6f3; font-family: Arial, sans-serif; }
-    #publications { background: #f9ebea; font-family: Verdana, sans-serif; }
-    #skills { background: #f4ecf7; font-family: 'Trebuchet MS', sans-serif; }
-    #education { background: #eaf2f8; font-family: Calibri, sans-serif; }
-    #experience { background: #fdf2e9; font-family: Helvetica, sans-serif; }
-    #achievements { background: #ebf5fb; font-family: Courier, monospace; }
-    #certificates { background: #ffffff; }
-    #gallery { background: #ffffff; }
-    #contact { background: #fef9e7; }
-
-    /* Profile photo */
-    .profile-photo {
-      width: 150px; height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-    header h1 { font-size: 2.2em; color: #222; }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      margin-top: 10px;
-      background: #1a73e8;
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .btn:hover { background: #155ab6; }
-
-    /* Cards */
-    .cards { display: flex; flex-wrap: wrap; gap: 15px; }
-    .card {
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      flex: 1 1 250px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
     /* Certificates */
+    .certificate-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
     .certificate-item {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 15px;
       text-align: center;
-      margin-bottom: 20px;
     }
     .certificate-item img {
       width: 100%;
-      height: 200px;
+      height: 150px;
       object-fit: cover;
       border-radius: 6px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
     .certificate-item img:hover { transform: scale(1.05); }
+    .certificate-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
 
     /* Photo Gallery */
     .photo-gallery {
@@ -139,26 +112,16 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
-    .photo-item {
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
     .photo-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
       cursor: pointer;
-      transition: transform 0.3s ease;
     }
-    .photo-item img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
-    .photo-item p { margin-top: 8px; font-size: 0.95em; color: #444; }
+    .photo-item img:hover { transform: scale(1.05); }
 
     /* Lightbox */
     .lightbox { display: none; position: fixed; z-index: 2000; padding-top: 60px;
@@ -172,22 +135,23 @@
     .lightbox .prev { left: 20px; }
     .lightbox .next { right: 20px; }
     .lightbox .caption { margin-top: 10px; color: #ccc; font-size: 1em; }
-
-    /* Responsive */
-    @media(max-width: 900px) {
-      nav { width: 180px; }
-      .container { margin-left: 200px; }
-    }
-    @media(max-width: 700px) {
-      nav { position: relative; width: 100%; height: auto; flex-direction: row; }
-      .container { margin-left: 0; }
-    }
   </style>
 </head>
 <body>
   <!-- Sidebar Navigation -->
   <nav>
     <h2>Muhammad Arslan</h2>
+
+    <!-- Contact Info with Icons -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:muhammadarslandaar@gmail.com">Email</a></p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+923157449626">+92 3157449626</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+923157449626" target="_blank">WhatsApp</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/muhammad-arslan-daar/" target="_blank">LinkedIn</a></p>
+      <p><i class="fas fa-id-badge"></i> <a href="https://orcid.org/0009-0000-9622-5682" target="_blank">ORCID</a></p>
+    </div>
+
+    <!-- Navigation -->
     <a href="#about">About</a>
     <a href="#statement">Statement</a>
     <a href="#research">Research</a>
@@ -202,194 +166,66 @@
   </nav>
 
   <div class="container">
-    <!-- About -->
-    <section id="about">
-      <header>
-        <h1>Muhammad Arslan</h1>
-        <img src="profile.png" alt="Profile Photo" class="profile-photo">
-      </header>
-      <p>I am an <strong>MPhil-qualified chemist</strong> specializing in <strong>Density Functional Theory (DFT)</strong>, green catalysis, and organometallic synthesis. My work integrates <strong>experimental chemistry</strong> and <strong>computational modeling</strong> to design sustainable catalytic systems for environmental applications such as dye degradation and pollutant removal.</p>
-      <a href="Muhammad-Arslan-CV.pdf" class="btn">📄 Download My CV</a>
-    </section>
-
-    <!-- Personal Statement -->
-    <section id="statement">
-      <h2>💡 Personal Statement</h2>
-      <p>People matter. It is rewarding and gratifying to do things that have a positive impact on other people, and painful to do things that are harmful to other people.</p>
-      <p>Knowledge matters. The future should be better than the present, just like the present is better than the past. The vast majority of human lives have been massively improved by scientific and technological progress. Contributing to and sharing that progress is a worthy and noble endeavour.</p>
-      <p>Freedom matters. Being able to do, say, and think what you want is valuable and important, as is empowering and enabling others to be free.</p>
-    </section>
-
-    <!-- Research Interests -->
-    <section id="research">
-      <h2>🔬 Research Interests</h2>
-      <div class="cards">
-        <div class="card">
-          <ul>
-            <li>Computational chemistry (DFT, Gaussian, GaussView)</li>
-            <li>Green catalysis and eco-friendly reaction pathways</li>
-            <li>Organometallic and coordination chemistry</li>
-          </ul>
+    <!-- Certificates -->
+    <section id="certificates">
+      <h2>📜 Certificates</h2>
+      <div class="certificate-gallery">
+        <div class="certificate-item">
+          <a href="certificates/Forensic-Science-Fingerprints.pdf" target="_blank">
+            <img src="certificates/Forensic-Science-Fingerprints.jpg" alt="Forensic Science Fingerprints">
+          </a>
+          <p>Forensic Science – Fingerprints</p>
         </div>
-        <div class="card">
-          <ul>
-            <li>Mechanistic and kinetic studies</li>
-            <li>Environmental chemistry and pollutant degradation</li>
-          </ul>
+        <div class="certificate-item">
+          <a href="certificates/Digital-Forensic-Certificate.pdf" target="_blank">
+            <img src="certificates/Digital-Forensic-Certificate.jpg" alt="Digital Forensic Certificate">
+          </a>
+          <p>Digital Forensics</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>📚 Publications</h2>
-      <ul>
-        <li><strong>Green Photooxidative Degradation of Reactive Blue Dye via Ascorbic Acid and Its Metal Complexes:</strong> Kinetics, RSM Optimization, and DFT Validation. <em>Under Review</em> – Molecular Catalysis (IF=4.9).</li>
-        <li><strong>Visible-Light-Induced Green Organocatalytic Degradation of Reactive Black 5:</strong> A Mechanistic and Kinetic Study with RSM Optimization. <em>Under Review</em> – ChemistrySelect (IF=2.0).</li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>🧪 Laboratory Skills</h2>
-      <ul>
-        <li>Raman Spectroscopy</li>
-        <li>Synthesis</li>
-        <li>Salt analysis</li>
-        <li>UV-Vis Spectrophotometry</li>
-        <li>Rotatory Evaporator</li>
-        <li>Gallenkamp Melting Point Apparatus</li>
-        <li>Column Chromatography</li>
-        <li>Titrations</li>
-      </ul>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <h2>🎓 Education</h2>
-      <div class="cards">
-        <div class="card">
-          <strong>M.Phil. Chemistry</strong> – University of Agriculture, Faisalabad<br>
-          CGPA: 3.09 / 4.00<br>
-          <em>Thesis:</em> Comparative Study of Azolium Based Selenium Compounds using DFT
+        <div class="certificate-item">
+          <a href="certificates/Essential-Software-Workshop.pdf" target="_blank">
+            <img src="certificates/Essential-Software-Workshop.jpg" alt="Essential Software Workshop">
+          </a>
+          <p>Essential Software Workshop</p>
         </div>
-        <div class="card">
-          <strong>B.S. Chemistry</strong> – Government College University, Faisalabad<br>
-          CGPA: 3.29 / 4.00 (Specialization: Organic Chemistry)
+        <div class="certificate-item">
+          <a href="certificates/Gas-Chromatography.pdf" target="_blank">
+            <img src="certificates/Gas-Chromatography.jpg" alt="Gas Chromatography">
+          </a>
+          <p>Gas Chromatography</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/High-Performance-Liquid-Chromatography.pdf" target="_blank">
+            <img src="certificates/High-Performance-Liquid-Chromatography.jpg" alt="HPLC">
+          </a>
+          <p>High Performance Liquid Chromatography</p>
+        </div>
+        <div class="certificate-item">
+          <a href="certificates/Scanning-Electron-Microscope.pdf" target="_blank">
+            <img src="certificates/Scanning-Electron-Microscope.jpg" alt="Scanning Electron Microscope">
+          </a>
+          <p>Scanning Electron Microscope</p>
         </div>
       </div>
     </section>
-
-    <!-- Work Experience -->
-    <section id="experience">
-      <h2>💼 Work Experience</h2>
-      <div class="cards">
-        <div class="card"><strong>Research Assistant</strong> – Synthetic Organometallic & Coordination Chemistry Lab, UAF (2021 – Present)</div>
-        <div class="card"><strong>R&D Intern</strong> – Nishat Dyeing & Finishing, Lahore (Feb–Jul 2022)</div>
-        <div class="card"><strong>Lecturer</strong> – Chenab College, Faisalabad (2023–2024)</div>
-      </div>
-    </section>
-
-    <!-- Achievements -->
-    <section id="achievements">
-      <h2>🏆 Scholarships & Awards</h2>
-      <ul>
-        <li>MTB College Sadiqabad Fully Funded Scholarship (2014-2016)</li>
-        <li>HEC Pakistan Laptop Award</li>
-        <li>Stipendium Hungaricum Scholarship – Shortlisted</li>
-        <li>Completed certifications in Forensic Science, Advanced Data Analytics, and AI Essentials</li>
-      </ul>
-    </section>
-
-<!-- Certificates -->
-<section id="certificates">
-  <h2>📜 Certificates</h2>
-  <div class="gallery">
-    <div class="certificate-item">
-      <a href="certificates/Forensic-Science-Fingerprints.pdf" target="_blank">
-        <img src="certificates/Forensic-Science-Fingerprints.jpg" alt="Forensic-Science-Fingerprints">
-      </a>
-      <p>Forensic-Science-Fingerprints</p>
-    </div>
-
-    <div class="certificate-item">
-      <a href="certificates/Digital-Forensic-Certificate.pdf" target="_blank">
-        <img src="certificates/Digital-Forensic-Certificate.jpg" alt="Digital-Forensic-Certificate">
-      </a>
-      <p>Digital-Forensic-Certificate</p>
-    </div>
-
-    <div class="certificate-item">
-      <a href="certificates/Essential-Software-Workshop.pdf" target="_blank">
-        <img src="certificates/Essential-Software-Workshop.jpg" alt="Essential-Software-Workshop">
-      </a>
-      <p>Essential-Software-Workshop</p>
-    </div>
-
-    <div class="certificate-item">
-      <a href="certificates/Gas-Chromatography.pdf" target="_blank">
-        <img src="certificates/Gas-Chromatography.jpg" alt="Gas-Chromatography">
-      </a>
-      <p>Gas-Chromatography</p>
-    </div>
-
-    <div class="certificate-item">
-      <a href="certificates/High-Performance-Liquid-Chromatography.pdf" target="_blank">
-        <img src="certificates/High-Performance-Liquid-Chromatography.jpg" alt="High-Performance-Liquid-Chromatography">
-      </a>
-      <p>High-Performance-Liquid-Chromatography</p>
-    </div>
-
-    <div class="certificate-item">
-      <a href="certificates/Scanning-Electron-Microscope.pdf" target="_blank">
-        <img src="certificates/Scanning-Electron-Microscope.jpg" alt="Scanning-Electron-Microscope">
-      </a>
-      <p>Scanning-Electron-Microscope</p>
-    </div>
-  </div>
-</section>
-
 
     <!-- Photo Gallery -->
     <section id="gallery">
       <h2>📸 Photo Gallery</h2>
       <div class="photo-gallery">
-        <div class="photo-item">
-          <img src="gallery/gallery4.jpg" alt="Research Presentation" onclick="openLightbox(0)">
-          <p>Research Presentation</p>
-        </div>
-        <div class="photo-item">
-          <img src="gallery/gallery2.jpg" alt="Lab Experiment" onclick="openLightbox(1)">
-          <p>Lab Experiment</p>
-        </div>
-        <div class="photo-item">
-          <img src="gallery/gallery5.jpg" alt="Conference Participation" onclick="openLightbox(2)">
-          <p>Conference Participation</p>
-        </div>
-        <div class="photo-item">
-          <img src="gallery/gallery1.jpg" alt="Chemistry Lecture" onclick="openLightbox(3)">
-          <p>Chemistry Lecture</p>
-        </div>
-        <div class="photo-item">
-          <img src="gallery/gallery3.jpg" alt="Team Collaboration" onclick="openLightbox(4)">
-          <p>Team Collaboration</p>
-        </div>
+        <div class="photo-item"><img src="gallery/gallery1.jpg" alt="Research Presentation" onclick="openLightbox(0)"></div>
+        <div class="photo-item"><img src="gallery/gallery2.jpg" alt="Lab Experiment" onclick="openLightbox(1)"></div>
+        <div class="photo-item"><img src="gallery/gallery3.jpg" alt="Conference Participation" onclick="openLightbox(2)"></div>
+        <div class="photo-item"><img src="gallery/gallery4.jpg" alt="Chemistry Lecture" onclick="openLightbox(3)"></div>
+        <div class="photo-item"><img src="gallery/gallery5.jpg" alt="Team Collaboration" onclick="openLightbox(4)"></div>
       </div>
     </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-      <span class="close" onclick="closeLightbox()">&times;</span>
-      <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-      <img class="lightbox-content" id="lightbox-img">
-      <span class="next" onclick="changeSlide(1)">&#10095;</span>
-      <div class="caption" id="lightbox-caption"></div>
-    </div>
 
     <!-- Contact -->
     <section id="contact">
       <h2>📬 Contact</h2>
-      <p>📧 Email: <a href="mailto:muhammadarslandaar@gmail.com">muhammadarslandaar@gmail.com</a></p>
-      <p class="contact">
-        Find me online:
-       
+      <p>If you'd like to collaborate or know more about my work, feel free to reach out via email or connect with me on LinkedIn and ORCID.</p>
+    </section>
+  </div>
+</body>
+</html>
