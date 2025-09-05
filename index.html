@@ -48,6 +48,11 @@
     .contact a img { width: 32px; margin-right: 10px; vertical-align: middle; }
 
     /* Certificates */
+    #certificates .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
     .certificate-item {
       background: #fff;
       border-radius: 8px;
@@ -64,12 +69,14 @@
       transition: transform 0.3s ease;
     }
     .certificate-item img:hover { transform: scale(1.05); }
+    .certificate-item h3 { margin: 10px 0; font-size: 1em; color: #222; }
 
     /* Photo Gallery */
     .photo-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
     .photo-item {
       background: #fff;
@@ -362,10 +369,4 @@
     }
 
     function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-
-    function changeSlide(n) {
-      currentSlide += n;
-      if (currentSlide < 0) currentSlide = images.length - 1;
-      if (currentSlide >= images.length) currentSlide = 0
+     
